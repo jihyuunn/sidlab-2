@@ -1,0 +1,19 @@
+{% extends "blog/index.html" %}
+
+{% block content %}
+<p class="font-weight-bold">Patent</p>
+<div class="publication_box">
+    <div>
+        {% for publication in publications %}
+            {% if publication.publication_sort == "Patent" %}
+            <p>{{ publication.author }} , 
+                <span class="font-weight-bold">{{ publication.year }}</span> , 
+                {{ publication.title }} , 
+                <span class="font-italic">{{ publication.issue }}</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ publication.award|default_if_none:"" }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

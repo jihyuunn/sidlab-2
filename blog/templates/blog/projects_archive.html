@@ -1,0 +1,15 @@
+{% extends "blog/index.html" %}
+
+{% block content %}
+<h1 class="mb-5 open">Finished Project</h1>
+    <div class="project_container">
+        {% for project in projects %}
+            {% if project.finished == True %}
+                <div class="project_item mb-5">
+                    <a href="{% url 'projects_detail' pk=project.pk %}"><img src="{{ project.photo.url }}" height="300" width="300"></a>
+                    <h5 class="mt-3 open">{{ project.project_name }}</h5>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

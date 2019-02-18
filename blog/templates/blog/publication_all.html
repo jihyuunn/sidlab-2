@@ -1,0 +1,60 @@
+{% extends "blog/index.html" %}
+
+{% block content %}
+<h1 class="mb-5 open">Publication</h1>
+<div class="publication_box">
+    <p class="noto-bold">2019</p>
+    <div>
+        {% for publication in publications %}
+            {% if publication.year == 2019 %}
+            <p>{{ publication.author }} , 
+                <span class="font-weight-bold">{{ publication.year }}</span> , 
+                {{ publication.title }} , 
+                <span class="font-italic">{{ publication.issue }}</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ publication.award|default_if_none:"" }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <p class="noto-bold">2018</p>
+    <div>
+        {% for publication in publications %}
+            {% if publication.year == 2018 %}
+            <p>{{ publication.author }} , 
+                <span class="font-weight-bold">{{ publication.year }}</span> , 
+                {{ publication.title }} , 
+                <span class="font-italic">{{ publication.issue }}</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ publication.award|default_if_none:"" }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <p class="noto-bold">2017</p>
+    <div>
+        {% for publication in publications %}
+            {% if publication.year == 2017 %}
+            <p>{{ publication.author }} , 
+                <span class="font-weight-bold">{{ publication.year }}</span> , 
+                {{ publication.title }} , 
+                <span class="font-italic">{{ publication.issue }}</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ publication.award|default_if_none:"" }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <p class="noto-bold">2016</p>
+    <div>
+        {% for publication in publications %}
+            {% if publication.year == 2016 %}
+            <p>{{ publication.author }} , 
+                <span class="font-weight-bold">{{ publication.year }}</span> , 
+                {{ publication.title }} , 
+                <span class="font-italic">{{ publication.issue }}</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ publication.award|default_if_none:"" }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
