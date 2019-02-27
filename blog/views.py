@@ -11,21 +11,30 @@ def index(request):
 def people_all(request):
     peoples = People.objects
     people_list = People.objects.all()
-    paginator = Paginator(people_list, 4)
+    paginator = Paginator(people_list, 6)
     page = request.GET.get('page')
     peopl = paginator.get_page(page)
     return render(request, 'blog/people_all.html', { 'peoples':peoples, 'peopl':peopl })
 
 def people_alumni(request):
-    peoples = People.objects.filter(created_date__lte=timezone.now())
-    return render(request, 'blog/people_alumni.html', { 'peoples':peoples })
+    peoples = People.objects.filter(graduated=True)
+    paginator = Paginator(peoples, 6)
+    page = request.GET.get('page')
+    peoplee = paginator.get_page(page)
+    return render(request, 'blog/people_alumni.html', { 'peoplee':peoplee })
 
 def projects_all(request):
-    projects = Project.objects.filter(created_date__lte=timezone.now())
+    project = Project.objects.filter(created_date__lte=timezone.now())
+    paginator = Paginator(project, 9)
+    page = request.GET.get('page')
+    projects = paginator.get_page(page)
     return render(request, 'blog/projects_all.html', { 'projects':projects })
 
 def projects_archive(request):
-    projects = Project.objects.filter(created_date__lte=timezone.now())
+    projectt = Project.objects.filter(finished=True)
+    paginator = Paginator(projectt, 6)
+    page = request.GET.get('page')
+    projects = paginator.get_page(page)
     return render(request, 'blog/projects_archive.html', { 'projects':projects })
 
 def projects_detail(request, pk):

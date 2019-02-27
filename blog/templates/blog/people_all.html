@@ -20,18 +20,18 @@
         {% endfor %}
     </div>
 </div>
-<div class="container">
+<div class="d-flex justify-content-center mb-5 mt-5">
     {% if peopl.has_previous %}
-    <a href="?page=1">First</a>
-    <a href="?page={{peopl.previous_page_number}}">Previous</a>
+    <a href="?page=1">First</a>&nbsp;&nbsp;&nbsp;
+    <a href="?page={{peopl.previous_page_number}}">Previous</a>&nbsp;&nbsp;&nbsp;
     {% endif %}
 
-    <span>{{ peopl.number }}</span>
-    <span>of</span>
-    <span>{{ peopl.paginator.num_pages }}</span>
+    <span>{{ peopl.number }}</span>&nbsp;
+    <span>of</span>&nbsp;
+    <span>{{ peopl.paginator.num_pages }}</span>&nbsp;&nbsp;&nbsp;
 
     {% if peopl.has_next %}
-    <a href="?page={{peopl.next_page_number}}">Next</a>
+    <a href="?page={{peopl.next_page_number}}">Next</a>&nbsp;&nbsp;&nbsp;
     <a href="?page={{peopl.paginator.num_pages}}">Last</a>
     {% endif %}
 </div>

@@ -4,7 +4,7 @@
 <h1 class="mb-5 open">Publication</h1>
 <div class="publication_box">
     <p class="noto-bold">2019</p>
-    <div>
+    <div class="mb-5">
         {% for publication in publications %}
             {% if publication.year == 2019 %}
             <p>{{ publication.author }} , 
@@ -18,7 +18,7 @@
     </div>
 
     <p class="noto-bold">2018</p>
-    <div>
+    <div class="mb-5">
         {% for publication in publications %}
             {% if publication.year == 2018 %}
             <p>{{ publication.author }} , 
@@ -31,7 +31,7 @@
         {% endfor %}
     </div>
     <p class="noto-bold">2017</p>
-    <div>
+    <div class="mb-5">
         {% for publication in publications %}
             {% if publication.year == 2017 %}
             <p>{{ publication.author }} , 
@@ -44,7 +44,7 @@
         {% endfor %}
     </div>
     <p class="noto-bold">2016</p>
-    <div>
+    <div class="mb-5">
         {% for publication in publications %}
             {% if publication.year == 2016 %}
             <p>{{ publication.author }} , 

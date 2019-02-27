@@ -14,17 +14,19 @@
     <title>SidLab</title>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'index' %}">Sid Lab</a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-center">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{% url 'index' %}">Sid Lab</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link major" href="{% url 'people_all' %}">
-                    PEOPLE
-                    <b class="caret"></b></a>
+                    PEOPLE</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{% url 'people_alumni' %}">- Alumni</a>
                     </div>
@@ -49,10 +51,10 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div>    
     </nav>
     <br>
-    <div class="ml-5 mr-5">
+    <div class="ml-5 mr-5 mt-5">
     {% block content %}
     {% endblock %}
     </div>

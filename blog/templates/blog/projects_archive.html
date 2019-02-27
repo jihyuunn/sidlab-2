@@ -2,6 +2,7 @@
 
 {% block content %}
 <h1 class="mb-5 open">Finished Project</h1>
+<div class="d-flex justify-content-center">
     <div class="project_container">
         {% for project in projects %}
             {% if project.finished == True %}
@@ -12,4 +13,21 @@
             {% endif %}
         {% endfor %}
     </div>
+</div>
+
+<div class="d-flex justify-content-center mb-5 mt-5">
+    {% if projects.has_previous %}
+    <a href="?page=1">First</a>&nbsp;&nbsp;&nbsp;
+    <a href="?page={{projects.previous_page_number}}">Previous</a>&nbsp;&nbsp;&nbsp;
+    {% endif %}
+
+    <span>{{ projects.number }}</span>&nbsp;
+    <span>of</span>&nbsp;
+    <span>{{ projects.paginator.num_pages }}</span>&nbsp;&nbsp;&nbsp;
+
+    {% if projects.has_next %}
+    <a href="?page={{projects.next_page_number}}">Next</a>&nbsp;&nbsp;&nbsp;
+    <a href="?page={{projects.paginator.num_pages}}">Last</a>
+    {% endif %}
+</div>
 {% endblock %}
