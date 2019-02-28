@@ -1,0 +1,1 @@
+web: gunicorn sidlab.wsgi --log-file -
