@@ -6,7 +6,7 @@ class Publication(models.Model):
     author = models.CharField(max_length=200)
     title = models.TextField()
     issue = models.TextField()
-    award = models.TextField(null=True)
+    award = models.TextField(blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     YEAR = (
         (2016, '2016'), (2017, '2017'), (2018, '2018'),
@@ -38,7 +38,7 @@ class Project(models.Model):
     project_name = models.CharField(max_length=200)
     project_text = models.TextField()
     photo = models.ImageField(blank=True)
-    finished = models.BooleanField(null=True)
+    finished = models.BooleanField(blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
@@ -47,9 +47,9 @@ class Project(models.Model):
 class People(models.Model):
     people_name = models.CharField(max_length=200)
     people_status = models.CharField(max_length=200)
-    blog = models.CharField(max_length=400, null=True)
+    blog = models.CharField(max_length=400, blank=True)
     profile = models.ImageField(upload_to='people', blank=True)
-    graduated = models.BooleanField(null=True)
+    graduated = models.BooleanField(blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
