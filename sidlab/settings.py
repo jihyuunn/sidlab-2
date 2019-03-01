@@ -142,7 +142,7 @@ AWS_ACCESS_KEY_ID = 'AKIAIHTJZXQKLDZV2YFA'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'sid-media'
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [
+#     STATIC_DIR,
+# ]
