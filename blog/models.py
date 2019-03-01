@@ -38,7 +38,7 @@ class Project(models.Model):
     project_name = models.CharField(max_length=200)
     project_text = models.TextField()
     photo = models.ImageField(blank=True)
-    finished = models.BooleanField(blank=True)
+    finished = models.BooleanField(null=True)
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
@@ -49,7 +49,7 @@ class People(models.Model):
     people_status = models.CharField(max_length=200)
     blog = models.CharField(max_length=400, blank=True)
     profile = models.ImageField(upload_to='people', blank=True)
-    graduated = models.BooleanField(blank=True)
+    graduated = models.BooleanField(null=True)
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
