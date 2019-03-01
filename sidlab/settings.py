@@ -139,9 +139,6 @@ DATABASES['default'].update(db_from_env)
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIAIHTJZXQKLDZV2YFA'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'sid-media'
 
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [
