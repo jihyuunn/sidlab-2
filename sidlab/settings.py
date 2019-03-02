@@ -143,11 +143,9 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATIC_URL = 'https://s3.ap-northeast-2.amazonaws.com/sid-media/'
-MEDIA_URL = STATIC_URL + 'media/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, "static")
-STATIC_ROOT = 'staticfiles'
+MEDIA_URL = STATIC_URL 
+# STATICFILES_DIRS = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = 'https://s3.ap-northeast-2.amazonaws.com/sid-media/media'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+
