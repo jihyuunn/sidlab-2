@@ -141,9 +141,18 @@ STATICFILES_DIRS = [
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIAIHTJZXQKLDZV2YFA'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'sidlab-s3'
+# AWS_ACCESS_KEY_ID = 'AKIAIHTJZXQKLDZV2YFA'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'sidlab-s3'
+import json
+ROOT_DIR = os.path.dirname(BASE_DIR)
+CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, 'heroku_practice/.config_secret')
+CONFIG_SETTINGS_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
+config_secret = json.loads(open(CONFIG_SETTINGS_COMMON_FILE).read())
+AWS_ACCESS_KEY_ID = config_secret['aws']['access_key_id']
+AWS_SECRET_ACCESS_KEY = config_secret['aws']['secret_access_key']
+AWS_STORAGE_BUCKET_NAME = config_secret['aws']['s3_bucket_name']
+
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
