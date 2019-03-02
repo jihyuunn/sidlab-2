@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
 import json
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
-CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, 'heroku_practice/.config_secret')
+CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, '.config_secret')
 CONFIG_SETTINGS_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
 config_secret = json.loads(open(CONFIG_SETTINGS_COMMON_FILE).read())
 AWS_ACCESS_KEY_ID = config_secret['aws']['access_key_id']
