@@ -145,6 +145,7 @@ STATICFILES_DIRS = [
 # AWS_SECRET_ACCESS_KEY = 'FrUAQuyFqNrzdRXgUQdtb8awMtMirEZfup6YMoa/'
 # AWS_STORAGE_BUCKET_NAME = 'sidlab-s3'
 import json
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, 'heroku_practice/.config_secret')
 CONFIG_SETTINGS_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
