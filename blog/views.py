@@ -11,7 +11,7 @@ def index(request):
 def people_all(request):
     peoples = People.objects
     people_list = People.objects.all()
-    paginator = Paginator(people_list, 6)
+    paginator = Paginator(people_list, 9)
     page = request.GET.get('page')
     peopl = paginator.get_page(page)
     return render(request, 'blog/people_all.html', { 'peoples':peoples, 'peopl':peopl })

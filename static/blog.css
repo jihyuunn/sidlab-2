@@ -3,7 +3,8 @@
 .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
 .navbar-default .navbar-nav > li.dropdown:hover > a:focus {
     background-color: rgb(231, 231, 231);
-    color: rgb(85, 85, 85);
+    /* color: rgb(85, 85, 85); */
+    color: #fff;
 }
 li.dropdown:hover > .dropdown-menu {
     display: block;
@@ -21,18 +22,10 @@ li.dropdown:hover > .dropdown-menu {
     font-weight: 700;
 }
 
-/* @font-face {
-    font-family: 'Open-Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Open Sans Light'), 
-         local('OpenSans-Light'), 
-         url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff) format('woff');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-} */
-
 body {
     font-family: 'Noto Sans KR', sans-serif; 
+    background-color: #fff;
+    margin-top: 3rem;
 }
 
 .project_container {
@@ -58,7 +51,7 @@ body {
     width: 400px;
     height: 400px;
     text-align: center;
-    margin: 40px 100px 40px 100px;
+    margin-bottom: 4rem;
   }
 
 .publication_box {
@@ -66,10 +59,24 @@ body {
 }
 
 .navbar-center {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translatex(-50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav {
-    height: 50px;
+    height: 75px;
+    /* border-bottom: solid 1px #ededed; */
+    background-color: #fff;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+.navbar-collapse {
+    justify-content: center;
+}
+.navbar-nav > li > a {
+    color: black;
 }

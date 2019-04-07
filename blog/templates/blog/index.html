@@ -13,26 +13,27 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Noto+Sans+KR:300,700" rel="stylesheet" type="text/css">
     <title>SidLab</title>
 </head>
-<body class="bg-light">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav navbar-center">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="{% url 'index' %}">Sid Lab</a>
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static 'sidlab logo(trans)-01.png'%}" width="240px;" height="50px;">
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link major" href="{% url 'people_all' %}">
+                    <a class="nav-link" href="{% url 'people_all' %}">
                     PEOPLE</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{% url 'people_alumni' %}">- Alumni</a>
                     </div>
                 </li>            
                 <li class="nav-item dropdown">
-                    <a class="nav-link major" href="{% url 'projects_all' %}">
+                    <a class="nav-link" href="{% url 'projects_all' %}">
                     PROJECTS
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
