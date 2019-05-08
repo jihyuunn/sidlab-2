@@ -19,4 +19,3 @@ urlpatterns = [
     path('publications/dc/', views.publications_dc, name="publications_dc"), 
  
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
