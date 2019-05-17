@@ -41,6 +41,10 @@ body {
     /* line-height: 100px; */
   }
 
+.project_img {
+    object-fit: cover;
+}  
+
 .people_container {
     max-width: 1200px;
     display: flex;
