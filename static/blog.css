@@ -48,9 +48,9 @@ body {
 .project_detail {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 80%;
-    margin-bottom: 100px;
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
 .people_container {
