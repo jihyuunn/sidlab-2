@@ -46,6 +46,9 @@ body {
 }  
 
 .project_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
     margin-bottom: 100px;
 }
