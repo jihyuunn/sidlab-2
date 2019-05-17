@@ -138,7 +138,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_STORAGE_BUCKET_NAME = 'sidlab-s3'
 AWS_S3_SIGNATURE_VERSION = "s3v4"
 AWS_S3_REGION_NAME = 'ap-northeast-2'
-AWS_S3_CUSTOM_DOMAIN = 's3.ap-northeast-2.amazonaws.com/%s/static' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = 's3.ap-northeast-2.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
