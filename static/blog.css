@@ -42,7 +42,7 @@ body {
   }
 
 .project_img {
-
+    object-fit: contain;
 }  
 
 .project_detail {
@@ -67,7 +67,7 @@ body {
   }
 
 .people_img {
-
+    object-fit: contain;
 }
 
 .publication_box {
