@@ -13,7 +13,7 @@
     <div class="people_container infinite-container">
         {% for people in peopl %}
             <div class="people_item infinite-item">
-                    <a href="{{ people.blog|default_if_none:'' }}"><img src="{{ people.profile.url }}" height="300" width="300"></a>
+                    <a href="{{ people.blog|default_if_none:'' }}"><img src="{{ people.profile.url }}" height="300" width="300" class="people_img"></a>
                 <h5 class="mt-3 infinite-item">{{ people.people_name }}</h5>
                 <h5>{{ people.people_status }}</h5>
             </div>
