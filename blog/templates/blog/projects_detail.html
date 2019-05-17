@@ -4,5 +4,6 @@
 <div style="width: 1000px;">
     <h3 class="open">{{ project.project_name }}</h3>
     <h6>{{ project.project_text|linebreaks }}</h6>
+    <img src="{{ project.photo.url }}" width="500" height="300" class="project_img">
 </div>
 {% endblock %}
