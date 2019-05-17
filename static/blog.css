@@ -45,6 +45,11 @@ body {
     object-fit: cover;
 }  
 
+.project_detail {
+    width: 80%;
+    margin-bottom: 100px;
+}
+
 .people_container {
     max-width: 1200px;
     display: flex;
