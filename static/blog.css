@@ -54,6 +54,10 @@ body {
     margin-bottom: 4rem;
   }
 
+.people_img {
+    object-fit: cover;
+}
+
 .publication_box {
     width: 800px;
 }
