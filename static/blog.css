@@ -1,27 +1,27 @@
-
+/* nav bar drop down  */
 .navbar-default .navbar-nav > li.dropdown:hover > a, 
 .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
 .navbar-default .navbar-nav > li.dropdown:hover > a:focus {
     background-color: rgb(231, 231, 231);
-    /* color: rgb(85, 85, 85); */
     color: #fff;
 }
 li.dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-.people_box {
+/* .people_box {
     margin-bottom: 80px;
-}
+} */
 
-.open {
+/* .open {
     font-family: 'Open Sans', sans-serif;
-}
+} */
 .noto-bold {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
 }
 
+/* 모든 페이지 공통 css */
 body {
     font-family: 'Noto Sans KR', sans-serif; 
     background-color: #fff;

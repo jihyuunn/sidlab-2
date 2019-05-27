@@ -9,6 +9,8 @@
     학연과정 : 한국과학기술연구원, 한국원자력의학원, 한국기초과학지원연구원 등<br><br>
     모든 구성원에게 학비 전액과 일부 생활비를 지원합니다.
     </p>
+
+<!----- people page 이미지 box ------>
 <div class="d-flex justify-content-center">
     <div class="people_container infinite-container">
         {% for people in peopl %}
@@ -20,6 +22,8 @@
         {% endfor %}
     </div>
 </div>
+
+<!------ people page pagination ----->
 <div class="d-flex justify-content-center mb-5 mt-5">
     {% if peopl.has_previous %}
     <a href="?page=1">First</a>&nbsp;&nbsp;&nbsp;

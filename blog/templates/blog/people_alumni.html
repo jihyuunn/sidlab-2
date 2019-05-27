@@ -2,6 +2,8 @@
 
 {% block content %}
 <h1 class="mb-5 open">Alumni</h1>
+
+<!---- alumni page 이미지 box ---->
 <div class="d-flex justify-content-center">
     <div class="people_container">
         {% for people in peoplee %}
@@ -13,6 +15,8 @@
         {% endfor %}
     </div>
 </div>
+
+<!----- alumni page pagination ----->
 <div class="d-flex justify-content-center mb-5 mt-5">
     {% if peoplee.has_previous %}
     <a href="?page=1">First</a>&nbsp;&nbsp;&nbsp;
