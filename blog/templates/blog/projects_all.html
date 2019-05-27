@@ -1,7 +1,9 @@
 {% extends "blog/index.html" %}
 
 {% block content %}
-<h1 class="mb-5 open">All Project</h1>
+<h1 class="mb-5">All Project</h1>
+
+<!---- project page 이미지 box --->
 <div class="d-flex justify-content-center">
     <div class="project_container">
         {% for project in projects %}
@@ -13,6 +15,7 @@
     </div>
 </div>
 
+<!---- project page pagination --->
 <div class="d-flex justify-content-center mb-5 mt-5">
     {% if projects.has_previous %}
     <a href="?page=1">First</a>&nbsp;&nbsp;&nbsp;

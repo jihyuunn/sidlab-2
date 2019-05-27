@@ -1,79 +1,4 @@
-/* nav bar drop down  */
-.navbar-default .navbar-nav > li.dropdown:hover > a, 
-.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
-.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
-    background-color: rgb(231, 231, 231);
-    color: #fff;
-}
-li.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-/* .people_box {
-    margin-bottom: 80px;
-} */
-
-/* .open {
-    font-family: 'Open Sans', sans-serif;
-} */
-.noto-bold {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 700;
-}
-
-/* 모든 페이지 공통 css */
-body {
-    font-family: 'Noto Sans KR', sans-serif; 
-    background-color: #fff;
-    margin-top: 3rem;
-}
-
-.project_container {
-    max-width: 1230px;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-.project_item {
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    /* line-height: 100px; */
-  }
-
-.project_img {
-    object-fit: contain;
-}  
-
-.project_detail {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 100px;
-}
-
-.people_container {
-    max-width: 1200px;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.people_item {
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-.people_img {
-    object-fit: contain;
-}
-
-.publication_box {
-    width: 800px;
-}
-
+/* navbar 가운데 정렬 */
 .navbar-center {
     /* position: absolute;
     left: 50%;
@@ -82,6 +7,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* navbar 색 */
 nav {
     height: 75px;
     /* border-bottom: solid 1px #ededed; */
@@ -95,4 +22,80 @@ nav {
 }
 .navbar-nav > li > a {
     color: black;
+}
+
+/* nav bar drop down  */
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: #fff;
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.noto-bold {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+/* 모든 페이지 공통 css */
+body {
+    font-family: 'Noto Sans KR', sans-serif; 
+    background-color: #fff;
+    margin-top: 3rem;
+}
+
+/* project page 전체 이미지 감싸고 있는 div */
+.project_container {
+    max-width: 1230px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+/* project page 각 이미지 div */
+.project_item {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+  }
+
+/* project image  */
+.project_img {
+    object-fit: contain;
+}  
+
+/* project detail 전체 div */
+.project_detail {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+/* people page 이미지 전체 div */
+.people_container {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* people page 각 이미지 div */
+.people_item {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+/* people image */
+.people_img {
+    object-fit: contain;
+}
+
+/* pubication page 전체 div */
+.publication_box {
+    width: 800px;
 }
